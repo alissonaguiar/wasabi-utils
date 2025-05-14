@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+venv/
+
+#projeto
+local_files/
+
+# Configuração sensível
+wasabi_credentials.properties
+.env
