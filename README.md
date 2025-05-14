@@ -1,11 +1,20 @@
-# WASABI ACCESS KEY
+# Wasabi Utils
 
-access-key= 2BD7JKQV9PJODPT4AB3L
-secret-key= NCafuJSWwlT4hz06eKMeWVDKVGOeF9q9KET3zVcB
+This repository contains utilities for working with Wasabi cloud storage services.
 
+## Configuration
 
-# BUCKET ALISSON (TESTE)
+To use these utilities, you need to create a configuration file with your Wasabi credentials.
 
-name= mralisson
-region= us-central-1
-public_access= default
+1. Create a copy of `config.example` and name it `config` 
+2. Fill in your actual Wasabi credentials in the `config` file
+
+**IMPORTANT**: The `config` file containing your actual credentials is ignored by git for security reasons. Never commit your actual access keys or secret keys to version control.
+
+## Usage
+
+[Add usage instructions here]
+
+## License
+
+[Add license information here]

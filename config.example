@@ -1,0 +1,9 @@
+# WASABI ACCESS KEY
+access-key= YOUR_ACCESS_KEY_HERE
+secret-key= YOUR_SECRET_KEY_HERE
+
+# BUCKET CONFIGURATION
+name= your_bucket_name
+region= your_region (e.g., us-central-1)
+public_access= default
+
