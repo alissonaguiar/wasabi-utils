@@ -258,6 +258,11 @@ def main():
     link.add_argument('s3_path', help='Caminho do arquivo no S3')
     link.add_argument('--expires', '-e', type=int, default=3600, help='Tempo de validade em segundos (padrão: 3600)')
 
+    # Generate URL (alias para link - compatibilidade com Node.js service)
+    genurl = subparsers.add_parser('generate-url', help='Gerar link temporário para download de arquivo')
+    genurl.add_argument('s3_path', help='Caminho do arquivo no S3')
+    genurl.add_argument('expires_in', type=int, help='Tempo de validade em segundos')
+
     args = parser.parse_args()
     creds = load_credentials()
 
@@ -271,6 +276,8 @@ def main():
         delete(args.s3_path, creds)
     elif args.command == 'link':
         generate_temp_link(args.s3_path, args.expires, creds)
+    elif args.command == 'generate-url':
+        generate_temp_link(args.s3_path, args.expires_in, creds)
 
 if __name__ == '__main__':
     main()
